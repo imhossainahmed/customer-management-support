@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+#root {
+  margin: 0 auto;
+}
+
+*{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
