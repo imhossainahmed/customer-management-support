@@ -4,7 +4,7 @@ import { Calendar, User } from "lucide-react";
 const TicketCard = ({ ticket, handleTaskStatus }) => {
     const {title, status, description, priority, createdAt, customer} = ticket;
     return (
-    <button className="bg-white rounded-xl p-5 shadow border border-gray-200 duration-75 hover:border-indigo-500 flex flex-col gap-3 cursor-pointer" onClick={() => handleTaskStatus(ticket)}>
+    <button className="bg-white rounded-xl p-5 shadow border border-gray-200 duration-75 hover:shadow-md flex flex-col gap-3 cursor-pointer" onClick={() => handleTaskStatus(ticket)}>
     <div className="flex justify-between items-start gap-4">
         <h3 className="text-lg font-medium tracking-tight text-gray-900 leading-snug">{title}</h3>
         <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-sm font-medium ${status === 'Open' ? 'text-green-700 bg-green-100' : 'text-yellow-700 bg-yellow-100'} shrink-0`}>

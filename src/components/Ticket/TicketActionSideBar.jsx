@@ -1,5 +1,5 @@
 
-const TicketActionSideBar = ({ taskStatus, resolvedTasks, handleComplete }) => {
+const TicketActionSideBar = ({ taskStatus, resolvedTasks, handleComplete, handleRemoveFromTaskStatus }) => {
   return (  
     <div className="lg:col-span-1 space-y-8">
       <div>
@@ -7,12 +7,13 @@ const TicketActionSideBar = ({ taskStatus, resolvedTasks, handleComplete }) => {
         {taskStatus.length === 0 ? (
           <p className="text-base text-gray-500">Select a ticket to add to Task Status</p>
         ) : (
-          <div className="flex flex-row gap-2">
+          <div className="flex flex-col gap-2">
           {taskStatus.map(task => (
-            <div key={task.id} className="bg-white rounded-lg p-4 shadow border border-gray-200 flex flex-col gap-2">
+            <div key={task.id} className="bg-white relative rounded-lg p-4 shadow border border-gray-200 flex flex-col gap-2">
               <h3 className="text-lg font-medium text-gray-900">{task.title}</h3>
               <p className="text-sm text-gray-500">{task.description}</p>
-              <button onClick={() => handleComplete(task)} className="mt-auto px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600 text-sm">Mark as Completed</button>
+              <button onClick={() => handleComplete(task)} className="btn btn-success btn-sm">Mark as Completed</button>
+              <button onClick={() => handleRemoveFromTaskStatus(task)} className="btn btn-danger btn-sm">Remove from Task Status</button>
             </div>
             ))}
         </div>
