@@ -5,15 +5,15 @@ import { Calendar, User, Mail, Linkedin, Twitter, MessageSquare } from 'lucide-r
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
+import StatusBanner from './components/StausBanner/StatusBanner';
 
 const App = () => {
  
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
-      <ToastContainer position="top-right" autoClose={3000} />
-
-    <NavBar />
-ç
+      <ToastContainer position="right-bottom" autoClose={3000} />
+      <NavBar />
+      <StatusBanner taskStatus={[1, 2, 3]} resolvedTasks={[4, 5]} />
       <Footer />
     </div>
   );
