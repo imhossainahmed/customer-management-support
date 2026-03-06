@@ -1,4 +1,4 @@
-import React from 'react';
+import { Plus } from 'lucide-react';
 
 const NavBar = () => {
     return (
@@ -18,10 +18,10 @@ const NavBar = () => {
             <li><a href='#'>Blog</a></li>
             <li><a href='#'>Download</a></li>
             <li><a href='#'>Contact</a></li>
-            <li><a href="/new-ticket" className="btn text-white rounded ml-2 bg-linear-to-bl from-violet-500 to-fuchsia-500">New Ticket</a></li>
+            <li><a href="/new-ticket" className="btn text-white rounded ml-2 bg-linear-to-bl from-violet-500 to-fuchsia-500"><Plus size={18}/> New Ticket</a></li>
         </ul>
         </div>
-        <a className="btn btn-ghost text-xl">CMS- Ticket System</a>
+        <a className="btn btn-ghost text-xl"><span className='text-indigo-500'>CMS</span> Ticket System</a>
     </div>
     <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal items-center px-1">
@@ -31,7 +31,7 @@ const NavBar = () => {
         <li><a href='#'>Blog</a></li>
         <li><a href='#'>Download</a></li>
         <li><a href='#'>Contact</a></li>
-        <li><a href="/new-ticket" className="btn text-white rounded bg-linear-to-bl from-violet-500 to-fuchsia-500">New Ticket</a></li>
+        <li><a href="/new-ticket" className="btn text-white rounded bg-linear-65 from-indigo-500 to-violet-500"><Plus size={18} /> New Ticket</a></li>
         </ul>
     </div>
     </div>
