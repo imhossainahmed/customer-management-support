@@ -16,7 +16,7 @@ const App = () => {
   const [taskStatus, setTaskStatus] = useState([]);
   const [resolvedTasks, setResolvedTasks] = useState([]);
 
-  const addToTaskStatus = (ticket) => {
+  const handleTaskStatus = (ticket) => {
     if (taskStatus.find(t => t.id === ticket.id)) {
       toast.error("This ticket is already in Task Status!");
       return;
@@ -33,13 +33,12 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
-      <ToastContainer position="right-bottom" autoClose={3000} />
+      <ToastContainer position="bottom-right" autoClose={3000} />
       <NavBar />
       <StatusBanner taskInProgress={2} resolvedTasks={4} />
       <main className="px-6 md:px-10 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 container mx-auto">
-          <TicketContainer getTicket={getTickets} addToTaskStatus={addToTaskStatus} />
-          <TicketActionSideBar taskStatus={taskStatus} resolvedTasks={resolvedTasks} handleComplete={handleComplete} /><TicketContainer getTicket={getTickets} addToTaskStatus={addToTaskStatus} />
+          <TicketContainer getTicket={getTickets} handleTaskStatus={handleTaskStatus} />
           <TicketActionSideBar taskStatus={taskStatus} resolvedTasks={resolvedTasks} handleComplete={handleComplete} />
         </div>
       </main>
