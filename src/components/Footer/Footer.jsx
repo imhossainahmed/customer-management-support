@@ -7,7 +7,7 @@ const Footer = () => {
             <footer className="bg-black text-white pt-16 pb-8 px-6 md:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
-            <h3 className="text-xl font-bold mb-6">CS — Ticket System</h3>
+            <h3 className="text-xl font-bold mb-6">CMS — Ticket System</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               Lorem Ipsum is simply duprinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
             </p>

@@ -4,23 +4,36 @@ const NavBar = () => {
     return (
     <div className='bg-base-100 shadow-sm top-0 z-50 sticky'>
     <div className="navbar container mx-auto">
-        <div className="flex-1">
-            <a className="btn btn-ghost text-xl">daisyUI</a>
+    <div className="navbar-start">
+        <div className="dropdown">
+        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
         </div>
-        <div className="flex-none">
-            <ul className="menu menu-horizontal px-1">
-            <li><a>Link</a></li>
-            <li>
-                <details>
-                <summary>Parent</summary>
-                <ul className="bg-base-100 rounded-t-none p-2">
-                    <li><a>Link 1</a></li>
-                    <li><a>Link 2</a></li>
-                </ul>
-                </details>
-            </li>
-            </ul>
+        <ul
+            tabIndex="-1"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+            <li><a href='#'>Home</a></li>
+            <li><a href='#'>FAQ</a></li>
+            <li><a href='#'>Changelog</a></li>
+            <li><a href='#'>Blog</a></li>
+            <li><a href='#'>Download</a></li>
+            <li><a href='#'>Contact</a></li>
+            <li><a href="/new-ticket" className="btn text-white rounded ml-2 bg-linear-to-bl from-violet-500 to-fuchsia-500">New Ticket</a></li>
+        </ul>
         </div>
+        <a className="btn btn-ghost text-xl">CMS- Ticket System</a>
+    </div>
+    <div className="navbar-end hidden lg:flex">
+        <ul className="menu menu-horizontal items-center px-1">
+        <li><a href='#'>Home</a></li>
+        <li><a href='#'>FAQ</a></li>
+        <li><a href='#'>Changelog</a></li>
+        <li><a href='#'>Blog</a></li>
+        <li><a href='#'>Download</a></li>
+        <li><a href='#'>Contact</a></li>
+        <li><a href="/new-ticket" className="btn text-white rounded bg-linear-to-bl from-violet-500 to-fuchsia-500">New Ticket</a></li>
+        </ul>
+    </div>
     </div>
     </div>
     );
