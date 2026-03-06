@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-6">CS — Ticket System</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+              Lorem Ipsum is simply duprinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
             </p>
           </div>
           <div>
