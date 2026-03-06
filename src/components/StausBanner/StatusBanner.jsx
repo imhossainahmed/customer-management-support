@@ -1,7 +1,7 @@
 import Vector1 from '../../assets/vector1.png';
 import Vector2 from '../../assets/vector2.png';
 
-const StatusBanner = ({taskStatus, resolvedTasks    }) => {
+const StatusBanner = ({taskInProgress, resolvedTasks}) => {
     return (
         <section className="p-6 md:p-10">
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6 container mx-auto'>
@@ -17,7 +17,7 @@ const StatusBanner = ({taskStatus, resolvedTasks    }) => {
           className="absolute h-full origin-top xl:scale-x-[2.5] lg:scale-x-[1.5] scale-x-[1]  bottom-0 right-0 w-40"
         />
         <p className="text-xl opacity-80">In-Progress</p>
-        <h1 className="text-6xl font-bold">0</h1>
+        <h1 className="text-6xl font-bold">{taskInProgress}</h1>
 
         </div>
         <div className="relative w-full max-w-4xl h-60 rounded-2xl overflow-hidden 
@@ -32,7 +32,7 @@ const StatusBanner = ({taskStatus, resolvedTasks    }) => {
           className="absolute h-full origin-top xl:scale-x-[2.5] lg:scale-x-[1.5] scale-x-[1] bottom-0 right-0 w-40"
         />
         <p className="text-xl opacity-80">Resolved</p>
-        <h1 className="text-6xl font-bold">0</h1>
+        <h1 className="text-6xl font-bold">{resolvedTasks}</h1>
 
         </div>
         </div>
