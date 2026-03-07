@@ -2,9 +2,7 @@ import Vector1 from '../../assets/vector1.png';
 import Vector2 from '../../assets/vector2.png';
 import { getResolvedTasksFromLocalStorage } from '../../utils/LocalStorage';
 
-const StatusBanner = ({totalTaskInProgress, resolvedTasks}) => {
-    const tasks = getResolvedTasksFromLocalStorage() || [];
-    const totalResolvedTasks = tasks.length;
+const StatusBanner = ({totalTaskInProgress}) => {
     return (
         <section className="p-6 md:p-10">
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6 container mx-auto'>
@@ -35,7 +33,7 @@ const StatusBanner = ({totalTaskInProgress, resolvedTasks}) => {
           className="absolute h-full origin-top xl:scale-x-[2.5] lg:scale-x-[1.5] scale-x-[1] bottom-0 right-0 w-40"
         />
         <p className="text-xl opacity-80">Resolved</p>
-        <h1 className="text-6xl font-bold">{totalResolvedTasks}</h1>
+        <h1 className="text-6xl font-bold">{getResolvedTasksFromLocalStorage().length}</h1>
 
         </div>
         </div>
